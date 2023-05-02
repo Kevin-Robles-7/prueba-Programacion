@@ -1,0 +1,68 @@
+comment on table Conductores is 'Creacion de la tabla de Conductores';
+
+create table Conductores(
+
+id_conductor SERIAL primary key,
+nombre_conductor varchar(50) not null,
+apellido_conductor varchar(50) not null,
+telefono varchar(50) not null,
+correo_electronico varchar(50) not null
+);
+
+comment on table Viajes is 'Creacion de la tabla de Viajes';
+
+create table Viajes(
+id_viaje SERIAL primary key,
+fecha_viaje date not null,
+hora_inicio time without time zone not null,
+hora_fin time without time zone not null,
+id_conductor int not null,
+id_ruta int not null,
+tiempo_total double precision not null
+);
+
+comment on table Rutas is 'Creacion de la tabla de Rutas';
+
+create table Rutas(
+id_ruta SERIAL primary key,
+nombre_ruta varchar(50) not null,
+origen varchar(50) not null,
+destino varchar(50) not null,
+distancia real not null
+);
+
+comment on insert Rutas is 'Inserccion de datos en la tabla de Rutas';
+
+insert into rutas (nombre_ruta,origen,destino,distancia)
+values
+('Ruta del Café en el Eje Cafetero','Colombia','Armenia','1284'),
+('Ruta del Sol en la Costa Caribe','Colombia','Barranquilla','950'),
+('Ruta de la Sal en la Guajira','Colombia','Guajira','873'),
+('Ruta del Oro en Antioquia','Colombia','Medellin','1052'),
+('Ruta de la Leyenda Vallenata en el Cesar','Colombia','Valledupar','879'),
+('Ruta del Río Magdalena en el centro del país','Colombia','Magdalena','691'),
+('Ruta del Chocolate en Santander','Colombia','Santander','875');
+
+comment on insert Conductores is 'Inserccion de datos en la tabla de Conductores';
+
+insert into conductores (nombre_conductor,apellido_conductor,telefono,correo_electronico)
+values
+('María','García','555-123-4567','maria.garcia@email.com'),
+('Juan','Lopez','555-987-6543','juan.lopez@email.com'),
+('Laura','Sánchez ','555-555-1212,','laura.sanchez@email.com'),
+('Andrés','Hernández','555-432-1098,','andres.hernandez@email.com'),
+('Ana ','Torres ','555-246-8102','ana.torres@email.com'),
+('Diego','Ortiz','555-369-8520','diego.ortiz@email.com'),
+('Carla','Vargas ','555-777-8888','carla.vargas@email.com');
+
+comment on select Conductores is 'Busqueda de todos los conductores en la base de datos';
+
+select * from conductores;
+
+comment on select Rutas is 'Busqueda de todas las rutas en la base de datos';
+
+select * from rutas;
+
+comment on select Viajes is 'Busqueda de todos los viajes en la base de datos';
+
+select * from viajes;
