@@ -1,0 +1,94 @@
+INTEGRACION DATOS DE CONDUCTORES JSON
+
+{
+    "nombre_conductor":"",
+    "apellido_conductor":"",
+    "telefono":"",
+    "correo_electronico":""
+}
+
+INTEGRACION DATOS DE RUTAS JSON
+
+{
+    "nombre_ruta":"",
+    "origen":"",
+    "destino":"",
+    "distancia":""
+}
+
+INTEGRACION DATOS DE VIAJES JSON
+
+{
+    "fecha_viaje":"YYYY-MM-DD",
+  "id_conductor": {
+    "id_conductor": 10 "Usar ID de 2 a 10"
+  },
+  "id_ruta": {
+    "id_ruta": 8 "Usar ID de 1 a 8"
+  },
+  "hora_inicio": "00:00:00",
+  "hora_fin": "00:00:00"
+}
+
+------------------------------------------------------------------------------------------------
+
+URL PARA VISUALIZAR CONDUCTORES, RUTAS Y VIAJES ATRAVEZ DE JSON
+
+http://localhost:8080/Viajes/
+
+http://localhost:8080/Conductores/
+
+http://localhost:8080/Rutas/
+
+------------------------------------------------------------------------------------------------
+
+URL PARA VISUALIZAR 1 SOLO CONDUCTOR
+
+http://localhost:8080/Conductores/id_conductor 
+(Cambiar el nombre id_conductor por un numero del 2 al 10)
+
+URL PARA MODIFICAR CONDUCTOR
+
+http://localhost:8080/Conductores/id_conductor
+(Cambiar el nombre id_conductor por un numero del 2 al 10)
+
+DATOS DE MODIFICACION CONDUCTOR - INTEGRACION
+
+{
+    "telefono":"",
+    "correo_electronico":""
+}
+
+URL PARA ELIMINAR CONDUCTORES
+
+http://localhost:8080/Conductores/id_conductor
+(Cambiar el nombre id_conductor por un numero del 2 al 10)
+
+------------------------------------------------------------------------------------------------
+
+URL PARA VISUALIZAR 1 SOLA RUTA
+
+http://localhost:8080/Rutas/id_ruta
+(Cambiar el nombre id_ruta por un numero del 1 al 8)
+
+URL PARA MODIFICAR RUTA
+
+http://localhost:8080/Rutas/id_ruta
+(Cambiar el nombre id_ruta por un numero del 1 al 8)
+
+DATOS DE MODIFICACION RUTA - INTEGRACION
+
+{
+    "distancia":""
+}
+
+URL PARA ELIMINAR RUTAS
+
+http://localhost:8080/Rutas/id_ruta
+(Cambiar el nombre id_ruta por un numero del 1 al 8)
+
+------------------------------------------------------------------------------------------------
+
+
+
+
